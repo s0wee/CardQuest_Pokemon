@@ -2,5 +2,29 @@
 {% load static %}
 
 {% block content %}
-<section class="home-content"></section>
+{% if object_list %}
+    <div class="card-container">
+        {% for object in object_list %}
+            <div class="card">
+                <h1>{{ object.name }}</h1>
+                <p>Rarity: {{ object.rarity }}</p>
+                <p>HP: {{ object.hp }}</p>
+                <p>Type: {{ object.card_type }}</p>
+                <p>Attack: {{ object.attack }}</p>
+                <p>Description: {{ object.description }}</p>
+                <p>Weakness: {{ object.weakness }}</p>
+                <p>Card Number: {{ object.card_number }}</p>
+                <p>Release Date: {{ object.release_date }}</p>
+                <p>Evolution Stage: {{ object.evolution_stage }}</p>
+                <p>Abilities: {{ object.abilities }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="card-container">
+        <div class="card">
+            <p>No Pokemon found.</p>
+        </div>
+    </div>
+{% endif %}
 {% endblock %}

@@ -57,7 +57,7 @@
   /*FOOTER*/
   footer {
     position: fixed;
-    height: 20vh;
+    height: 12vh;
     width: 100%;
     background-color: red;
     color: white;
@@ -68,9 +68,27 @@
   /*-----------------------------HOME_PAGE---------------------------------------*/
   /*CONTENT*/
   .home-content {
-    min-height: 100vh;
+    min-height: 200vh;
   }
-  
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between cards */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Styles for individual cards */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    width: 480px; /* Adjust the card width as needed */
+    /* Other card styles */
+}
+
   /*-----------------------------TRAINER_PAGE------------------------------------*/
   /*TRAINERS*/
   .trainers-container {
