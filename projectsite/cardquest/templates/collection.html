@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../static/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <title>Pokemon | Collection</title>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <section class="navbar">
+        <a href="{% url 'base' %}" class="btn" id="active"> Home </a>
+        <a href="{% url 'trainer' %}"  class="btn"> Trainer </a>
+        <a href="{% url 'pokemon' %}" class="btn"> Pokemon Card </a>
+        <a href="{% url 'collection' %}" class="btn"> Collection </a>
+        <a href="{% url 'admin:index' %}"  class="btn"> Admin </a>
+      </section>
+
+    <!--COLLECTION-->
+    <main>
+    <section class="collection-container">
+      <table class="styled-table">
+        <tbody>
+          <tr>
+            <th>Trainer</th>
+            <th>Pokemon Card</th>
+            <th>Collection Date</th>
+          </tr>
+
+          <tr>
+            <td>Kyle</td>
+            <td>Pikachu</td>
+            <td>2023-01-23</td>
+          </tr>
+          <tr>
+            <td>Sowee</td>
+            <td>Charmeleon</td>
+            <td>2023-01-23</td>
+          </tr>
+          <tr>
+            <td>kjmartinez</td>
+            <td>Raikou</td>
+            <td>2023-01-23</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    {%include 'includes/footer.html' %}
+</footer>
+  </body>
+</html>

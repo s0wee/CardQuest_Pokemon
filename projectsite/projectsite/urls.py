@@ -16,13 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cardquest.views import HomePageView, TrainerList
+from cardquest.views import HomePageView, TrainerList, PokemonList, CollectionList
 from cardquest import views
 
-_ = HomePageView, views, TrainerList
+_ = HomePageView, views, TrainerList, PokemonList, CollectionList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePageView.as_view(), name='home'),
-    path('trainer_list/', TrainerList.as_view(), name='trainer-list'),
+    path('', HomePageView.as_view(), name='base'),
+    path('trainer', TrainerList.as_view(), name='trainer'),
+    path('pokemon/', PokemonList.as_view(), name='pokemon'),
+    path('collection/', CollectionList.as_view(), name='collection'),
 ]
